@@ -6,7 +6,7 @@ public class Utils {
 	//Obtiene la ruta de la clase que se pasa como parámetro	
 	public static void setCodeBase(Class <?> c) {
 			String ruta = c.getProtectionDomain().getCodeSource()
-					.getCertificates().toString();
+					.getLocation().toString();
 			
 			String path = System.setProperty(CODEBASE, ruta);
 			
